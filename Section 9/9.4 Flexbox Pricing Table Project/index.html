@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+      html{
+        background-image: linear-gradient(to top, #b0acfa, #91b7ff, #6dc2ff, #43ccff, #00d4ff);
+        background-attachment: fixed;
+      }
+      body {
+        font-family: "Comfortaa", sans-serif;
+      }
+      .pricing-container{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 10rem;
+        gap: 5rem;
+      }
+      .pricing-container>*{
+        flex-basis: 200px;
+        max-width: 200px;
+        min-width: 200px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .pricing-plan{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        border-radius: 5%;
+        background-color: white;
+        padding: 20px;
+        height: 20rem;
+        border: black solid 0.2rem;
+      }
+      .plan-title{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: xx-large;
+      }
+      .plan-price{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: large;
+        font-weight: bold;
+      }
+      .plan-features>*{
+        list-style-type: none;
+        margin-top: 20px;
+      }
+      .plan-button{
+        background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-sizing: border-box;
+        color: #FFFFFF;
+        font-size: 20px;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 140px;
+        padding: 19px 24px;
+        touch-action: manipulation;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 800px) {
+        .pricing-container{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position:relative;
+          top:80px
+        }
+        .pricing-container>*{
+        flex-basis: 200px;
+        max-width: 400px;
+        min-width: 400px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .pricing-plan#last{
+          margin-bottom: 80px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan" id="last">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>

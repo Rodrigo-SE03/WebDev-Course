@@ -1,0 +1,25 @@
+#box1{
+    background-color: cadetblue;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    border: 10px solid black;
+}
+p{margin: 0;}
+#box2{
+    background-color: gold;
+    width: 200px;
+    height: 200px;
+    border: 10px solid black;
+    border-top: 20px solid black;
+    border-bottom: 20px solid black;
+    margin-left: 260px;
+}
+
+#box3{
+    background-color: indianred;
+    border: 10px solid black;
+    width: 200px;
+    height: 200px;
+    margin-left: 40px;
+}

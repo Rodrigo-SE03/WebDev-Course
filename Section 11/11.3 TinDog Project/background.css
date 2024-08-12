@@ -1,0 +1,31 @@
+@keyframes mygradient {
+    0% {
+        background-position: 0%
+    }
+
+    100% {
+        background-position: 100%
+    }
+}
+
+.grad {
+    margin: 0px;
+    background: linear-gradient(90deg, rgb(245, 127, 23), rgb(233, 30, 99),rgba(247, 19, 19, 0.548));
+    background-size: 600% 100%;
+    background-repeat: no-repeat;
+    animation: mygradient 24s linear infinite alternate
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(90deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
