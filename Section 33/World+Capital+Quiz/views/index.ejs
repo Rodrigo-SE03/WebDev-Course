@@ -36,12 +36,15 @@
 
   </form>
   <script>
-    var wasCorrect = "<%= locals.wasCorrect %>";
-    console.log(wasCorrect)
-    if (wasCorrect === "false") {
-      alert('Game over! Final best score: <%= locals.totalScore %>');
-      document.getElementById("app").innerHTML = '<a href="/" class="restart-button">Restart</a>'
-    }
+    const country_codes = "<%= countries %>".trim().split(',');
+    country_codes.forEach((code) => {
+      const element = document.getElementById(code);
+      if (element) {
+        element.style.fill = 'teal';
+      } else {
+        console.error(`Element with ID ${code} not found`);
+      }
+    });
 
 
   </script>

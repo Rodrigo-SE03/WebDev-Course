@@ -7,7 +7,7 @@ const db = new pg.Client({
   host: "localhost",
   database: "world",
   password: "EvoDB",
-  port: 5432,
+  port: 5433,
 });
 
 const app = express();
